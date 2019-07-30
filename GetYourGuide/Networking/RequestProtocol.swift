@@ -17,6 +17,7 @@ public enum URLMethod: String {
 }
 
 public protocol RequestProtocol {
+    
     var urlString: String { get }
     var body: Data? { get }
     var timeout: TimeInterval { get }
@@ -25,8 +26,6 @@ public protocol RequestProtocol {
     var headers: [String: String]? { get }
     var urlRequest: URLRequest? { get }
     
-    //func isSuccessResponse<T: Decodable>(_ response: T?) -> Bool
-    func isSuccessResponse(_ response: Data?) -> Bool
 }
 
 extension RequestProtocol {
@@ -55,7 +54,4 @@ extension RequestProtocol {
                                   timeoutAfter: timeout)
     }
     
-    public func isSuccessResponse(_ response: Data?) -> Bool {
-        return response != nil
-    }
 }
