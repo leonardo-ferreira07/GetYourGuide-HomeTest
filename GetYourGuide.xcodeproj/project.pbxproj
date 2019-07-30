@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		A705AC2722F0B2F3000F015C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A705AC2622F0B2F3000F015C /* AppDelegate.swift */; };
-		A705AC2922F0B2F3000F015C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A705AC2822F0B2F3000F015C /* ViewController.swift */; };
 		A705AC2C22F0B2F3000F015C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A705AC2A22F0B2F3000F015C /* Main.storyboard */; };
 		A705AC2E22F0B2F5000F015C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A705AC2D22F0B2F5000F015C /* Assets.xcassets */; };
 		A705AC3122F0B2F5000F015C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A705AC2F22F0B2F5000F015C /* LaunchScreen.storyboard */; };
 		A705AC3C22F0B2F5000F015C /* GetYourGuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A705AC3B22F0B2F5000F015C /* GetYourGuideTests.swift */; };
+		A705AC4D22F0B862000F015C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A705AC4B22F0B862000F015C /* NetworkError.swift */; };
+		A705AC4E22F0B862000F015C /* NetworkRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = A705AC4C22F0B862000F015C /* NetworkRequester.swift */; };
+		A705AC5022F0B925000F015C /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A705AC4F22F0B925000F015C /* RequestProtocol.swift */; };
+		A705AC5322F0BB61000F015C /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A705AC5222F0BB61000F015C /* StringExtensions.swift */; };
+		A705AC5522F0BBEB000F015C /* URLRequestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A705AC5422F0BBEB000F015C /* URLRequestExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +32,6 @@
 /* Begin PBXFileReference section */
 		A705AC2322F0B2F3000F015C /* GetYourGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetYourGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A705AC2622F0B2F3000F015C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A705AC2822F0B2F3000F015C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A705AC2B22F0B2F3000F015C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A705AC2D22F0B2F5000F015C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A705AC3022F0B2F5000F015C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +39,11 @@
 		A705AC3722F0B2F5000F015C /* GetYourGuideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetYourGuideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A705AC3B22F0B2F5000F015C /* GetYourGuideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetYourGuideTests.swift; sourceTree = "<group>"; };
 		A705AC3D22F0B2F5000F015C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A705AC4B22F0B862000F015C /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		A705AC4C22F0B862000F015C /* NetworkRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequester.swift; sourceTree = "<group>"; };
+		A705AC4F22F0B925000F015C /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		A705AC5222F0BB61000F015C /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		A705AC5422F0BBEB000F015C /* URLRequestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +85,9 @@
 		A705AC2522F0B2F3000F015C /* GetYourGuide */ = {
 			isa = PBXGroup;
 			children = (
+				A705AC5122F0BB54000F015C /* Extensions */,
+				A705AC4622F0B38C000F015C /* Networking */,
 				A705AC2622F0B2F3000F015C /* AppDelegate.swift */,
-				A705AC2822F0B2F3000F015C /* ViewController.swift */,
 				A705AC2A22F0B2F3000F015C /* Main.storyboard */,
 				A705AC2D22F0B2F5000F015C /* Assets.xcassets */,
 				A705AC2F22F0B2F5000F015C /* LaunchScreen.storyboard */,
@@ -94,6 +103,25 @@
 				A705AC3D22F0B2F5000F015C /* Info.plist */,
 			);
 			path = GetYourGuideTests;
+			sourceTree = "<group>";
+		};
+		A705AC4622F0B38C000F015C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A705AC4B22F0B862000F015C /* NetworkError.swift */,
+				A705AC4C22F0B862000F015C /* NetworkRequester.swift */,
+				A705AC4F22F0B925000F015C /* RequestProtocol.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A705AC5122F0BB54000F015C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A705AC5222F0BB61000F015C /* StringExtensions.swift */,
+				A705AC5422F0BBEB000F015C /* URLRequestExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +225,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A705AC2922F0B2F3000F015C /* ViewController.swift in Sources */,
+				A705AC5322F0BB61000F015C /* StringExtensions.swift in Sources */,
+				A705AC5522F0BBEB000F015C /* URLRequestExtensions.swift in Sources */,
+				A705AC4D22F0B862000F015C /* NetworkError.swift in Sources */,
 				A705AC2722F0B2F3000F015C /* AppDelegate.swift in Sources */,
+				A705AC4E22F0B862000F015C /* NetworkRequester.swift in Sources */,
+				A705AC5022F0B925000F015C /* RequestProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
