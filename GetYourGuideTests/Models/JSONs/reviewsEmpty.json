@@ -1,0 +1,23 @@
+{
+    "status": true,
+    "total_reviews_comments": 1,
+    "data": [
+        {
+            "review_id": null,
+            "rating": null,
+            "title": null,
+            "message": null,
+            "author": null,
+            "foreignLanguage": null,
+            "date": null,
+            "date_unformatted": {},
+            "languageCode": null,
+            "traveler_type": "couple",
+            "reviewerName": null,
+            "reviewerCountry": null,
+            "reviewerProfilePhoto": null,
+            "isAnonymous": null,
+            "firstInitial":  null
+        }
+    ]
+}
