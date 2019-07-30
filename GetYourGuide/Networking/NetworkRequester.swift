@@ -12,6 +12,33 @@ typealias DataResponse = (Data?, NetworkError?) -> Void
 
 class NetworkingRequester: NSObject {
     
+    /// Request Generic data from server
+    ///
+    /// - Parameters:
+    ///   - request: Request Protocol
+    ///   - completion: Generic or Error
+    public func performRequest<T: Decodable>(_ request: RequestProtocol,
+                                                    completion: @escaping (T?, NetworkError?) -> Void) {
+        performRequest(request) { (data, error) in
+            if let error = error {
+                completion(nil, error)
+                return
+            }
+            
+            guard let data = data else {
+                completion(nil, NetworkError.unknown("No error from server and Data is nil."))
+                return
+            }
+            
+            do {
+                let generic = try JSONDecoder().decode(T.self, from: data)
+                completion(generic, nil)
+            } catch {
+                completion(nil, NetworkError.parse(error.localizedDescription))
+            }
+        }
+    }
+    
     /// Fetch data from URL with NSUrlSession
     ///
     /// - Parameters:
