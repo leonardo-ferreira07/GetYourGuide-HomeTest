@@ -37,8 +37,10 @@ class GetYourGuideReviewsLogicController: NSObject {
     }
     
     fileprivate func loadCells(tableView: UITableView) {
-        
-        tableView.reloadData()
+
+        DispatchQueue.main.async {
+            tableView.reloadData()
+        }
     }
     
     fileprivate func loadData(tableView: UITableView) {
@@ -65,7 +67,6 @@ extension GetYourGuideReviewsLogicController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        let cellSource = reviewCells[indexPath.row]
         
     }
     
@@ -74,6 +75,10 @@ extension GetYourGuideReviewsLogicController: UITableViewDelegate {
         case .review:
             return UITableView.automaticDimension
         }
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 44.0
     }
     
 }
@@ -93,6 +98,10 @@ extension GetYourGuideReviewsLogicController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: reviewCells[indexPath.row].type.rawValue) else {
             return UITableViewCell()
+        }
+        
+        if let cell = cell as? GetYourGuideReviewTableViewCell {
+            cell.setCell(with: reviewCells[indexPath.row])
         }
         
         return cell

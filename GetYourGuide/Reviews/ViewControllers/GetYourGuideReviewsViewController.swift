@@ -16,6 +16,8 @@ class GetYourGuideReviewsViewController: UITableViewController {
         super.viewDidLoad()
 
         configureViewControllerTitle()
+        setLogicControllers()
+        loadTableView()
     }
     
 }
@@ -26,6 +28,10 @@ extension GetYourGuideReviewsViewController {
     
     func setLogicControllers() {
         reviewsLogicController.setTableView(tableView: tableView)
+    }
+    
+    func loadTableView() {
+        reviewsLogicController.loadTableView(tableView: tableView)
     }
 }
 

@@ -28,6 +28,8 @@
 		A705AC7522F0DB62000F015C /* GetYourGuideReviewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A705AC7422F0DB62000F015C /* GetYourGuideReviewsViewModel.swift */; };
 		A705AC7722F0DE33000F015C /* GetYourGuideReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A705AC7622F0DE33000F015C /* GetYourGuideReviewsViewController.swift */; };
 		A705AC7A22F0DE98000F015C /* GetYourGuideReviewsLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A705AC7922F0DE98000F015C /* GetYourGuideReviewsLogicController.swift */; };
+		A705AC7E22F0E184000F015C /* GetYourGuideReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A705AC7C22F0E184000F015C /* GetYourGuideReviewTableViewCell.swift */; };
+		A705AC7F22F0E184000F015C /* GetYourGuideReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A705AC7D22F0E184000F015C /* GetYourGuideReviewTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		A705AC7422F0DB62000F015C /* GetYourGuideReviewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetYourGuideReviewsViewModel.swift; sourceTree = "<group>"; };
 		A705AC7622F0DE33000F015C /* GetYourGuideReviewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetYourGuideReviewsViewController.swift; sourceTree = "<group>"; };
 		A705AC7922F0DE98000F015C /* GetYourGuideReviewsLogicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetYourGuideReviewsLogicController.swift; sourceTree = "<group>"; };
+		A705AC7C22F0E184000F015C /* GetYourGuideReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetYourGuideReviewTableViewCell.swift; sourceTree = "<group>"; };
+		A705AC7D22F0E184000F015C /* GetYourGuideReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GetYourGuideReviewTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +216,7 @@
 		A705AC7222F0DAD0000F015C /* Reviews */ = {
 			isa = PBXGroup;
 			children = (
+				A705AC7B22F0E163000F015C /* Cells */,
 				A705AC7822F0DE7F000F015C /* LogicControllers */,
 				A705AC7322F0DAEA000F015C /* ViewModels */,
 				A705AC6E22F0D6C1000F015C /* ViewControllers */,
@@ -233,6 +238,15 @@
 				A705AC7922F0DE98000F015C /* GetYourGuideReviewsLogicController.swift */,
 			);
 			path = LogicControllers;
+			sourceTree = "<group>";
+		};
+		A705AC7B22F0E163000F015C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A705AC7C22F0E184000F015C /* GetYourGuideReviewTableViewCell.swift */,
+				A705AC7D22F0E184000F015C /* GetYourGuideReviewTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +332,7 @@
 			files = (
 				A705AC3122F0B2F5000F015C /* LaunchScreen.storyboard in Resources */,
 				A705AC2E22F0B2F5000F015C /* Assets.xcassets in Resources */,
+				A705AC7F22F0E184000F015C /* GetYourGuideReviewTableViewCell.xib in Resources */,
 				A705AC2C22F0B2F3000F015C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +360,7 @@
 				A705AC4D22F0B862000F015C /* NetworkError.swift in Sources */,
 				A705AC2722F0B2F3000F015C /* AppDelegate.swift in Sources */,
 				A705AC5D22F0C7CC000F015C /* GetYourGuideReviewsRequest.swift in Sources */,
+				A705AC7E22F0E184000F015C /* GetYourGuideReviewTableViewCell.swift in Sources */,
 				A705AC6022F0CA36000F015C /* GetYourGuideReviewsModel.swift in Sources */,
 				A705AC5B22F0C712000F015C /* URLConstants.swift in Sources */,
 				A705AC4E22F0B862000F015C /* NetworkRequester.swift in Sources */,
