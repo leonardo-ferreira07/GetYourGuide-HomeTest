@@ -19,18 +19,18 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7c-KR-kLC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7c-KR-kLC">
+                        <rect key="frame" x="16" y="10" width="288" height="23.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="U7c-KR-kLC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="l9h-Qb-abx"/>
-                    <constraint firstAttribute="bottom" secondItem="U7c-KR-kLC" secondAttribute="bottom" id="mge-hK-c3o"/>
-                    <constraint firstItem="U7c-KR-kLC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="p5U-w1-CuQ"/>
-                    <constraint firstAttribute="trailing" secondItem="U7c-KR-kLC" secondAttribute="trailing" id="s10-na-seo"/>
+                    <constraint firstItem="U7c-KR-kLC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="l9h-Qb-abx"/>
+                    <constraint firstAttribute="bottom" secondItem="U7c-KR-kLC" secondAttribute="bottom" constant="10" id="mge-hK-c3o"/>
+                    <constraint firstItem="U7c-KR-kLC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="p5U-w1-CuQ"/>
+                    <constraint firstAttribute="trailing" secondItem="U7c-KR-kLC" secondAttribute="trailing" constant="16" id="s10-na-seo"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
