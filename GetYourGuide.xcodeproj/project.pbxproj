@@ -27,6 +27,7 @@
 		A705AC6D22F0D330000F015C /* reviewsEmpty.json in Resources */ = {isa = PBXBuildFile; fileRef = A705AC6C22F0D330000F015C /* reviewsEmpty.json */; };
 		A705AC7522F0DB62000F015C /* GetYourGuideReviewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A705AC7422F0DB62000F015C /* GetYourGuideReviewsViewModel.swift */; };
 		A705AC7722F0DE33000F015C /* GetYourGuideReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A705AC7622F0DE33000F015C /* GetYourGuideReviewsViewController.swift */; };
+		A705AC7A22F0DE98000F015C /* GetYourGuideReviewsLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A705AC7922F0DE98000F015C /* GetYourGuideReviewsLogicController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		A705AC6C22F0D330000F015C /* reviewsEmpty.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = reviewsEmpty.json; sourceTree = "<group>"; };
 		A705AC7422F0DB62000F015C /* GetYourGuideReviewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetYourGuideReviewsViewModel.swift; sourceTree = "<group>"; };
 		A705AC7622F0DE33000F015C /* GetYourGuideReviewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetYourGuideReviewsViewController.swift; sourceTree = "<group>"; };
+		A705AC7922F0DE98000F015C /* GetYourGuideReviewsLogicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetYourGuideReviewsLogicController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 		A705AC7222F0DAD0000F015C /* Reviews */ = {
 			isa = PBXGroup;
 			children = (
+				A705AC7822F0DE7F000F015C /* LogicControllers */,
 				A705AC7322F0DAEA000F015C /* ViewModels */,
 				A705AC6E22F0D6C1000F015C /* ViewControllers */,
 			);
@@ -222,6 +225,14 @@
 				A705AC7422F0DB62000F015C /* GetYourGuideReviewsViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A705AC7822F0DE7F000F015C /* LogicControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A705AC7922F0DE98000F015C /* GetYourGuideReviewsLogicController.swift */,
+			);
+			path = LogicControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +341,7 @@
 				A705AC5322F0BB61000F015C /* StringExtensions.swift in Sources */,
 				A705AC7722F0DE33000F015C /* GetYourGuideReviewsViewController.swift in Sources */,
 				A705AC5522F0BBEB000F015C /* URLRequestExtensions.swift in Sources */,
+				A705AC7A22F0DE98000F015C /* GetYourGuideReviewsLogicController.swift in Sources */,
 				A705AC4D22F0B862000F015C /* NetworkError.swift in Sources */,
 				A705AC2722F0B2F3000F015C /* AppDelegate.swift in Sources */,
 				A705AC5D22F0C7CC000F015C /* GetYourGuideReviewsRequest.swift in Sources */,

@@ -10,12 +10,23 @@ import UIKit
 
 class GetYourGuideReviewsViewController: UITableViewController {
 
+    fileprivate let reviewsLogicController: GetYourGuideReviewsLogicController = GetYourGuideReviewsLogicController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureViewControllerTitle()
     }
     
+}
+
+// MARK: - Logic Controller
+
+extension GetYourGuideReviewsViewController {
+    
+    func setLogicControllers() {
+        reviewsLogicController.setTableView(tableView: tableView)
+    }
 }
 
 // MARK: - UI Title configuration

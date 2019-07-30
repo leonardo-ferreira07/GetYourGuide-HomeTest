@@ -28,7 +28,7 @@ class GetYourGuideReviewsViewModel {
     
     var isLoadingContent: Bool = false
     
-    func getData(response: @escaping ([GetYourGuideReviewCell]) -> Void) {
+    func getData(page: Int = 0, response: @escaping ([GetYourGuideReviewCell]) -> Void) {
         isLoadingContent = true
         response([])
         
