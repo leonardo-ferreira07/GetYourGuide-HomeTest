@@ -10,7 +10,7 @@ import UIKit
 
 class GetYourGuideReviewsViewController: UITableViewController {
 
-    fileprivate let reviewsLogicController: GetYourGuideReviewsLogicController = GetYourGuideReviewsLogicController()
+    let reviewsLogicController: GetYourGuideReviewsLogicController = GetYourGuideReviewsLogicController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
