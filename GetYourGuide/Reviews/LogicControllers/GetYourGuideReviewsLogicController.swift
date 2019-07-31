@@ -74,10 +74,6 @@ class GetYourGuideReviewsLogicController: NSObject {
 
 extension GetYourGuideReviewsLogicController: UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let cell = cell as? GetYourGuideReviewTableViewCell {
             cell.setCellImages(with: reviewCells[indexPath.row])

@@ -43,20 +43,25 @@ class GetYourGuideReviewsLogicControllerTests: XCTestCase {
 //MARK:- TableView
 extension GetYourGuideReviewsLogicControllerTests {
     
-    func testHasTableView(){
+    func testHasTableView() {
         XCTAssertNotNil(viewController.tableView)
     }
     
-    func testTableViewHasDelegate(){
+    func testTableViewHasDelegate() {
         XCTAssertNotNil(viewController.tableView?.delegate)
     }
     
-    func testTableViewConformsToTableViewDelegateProtocol(){
+    func testTableViewConformsToTableViewDelegateProtocol() {
         XCTAssertTrue(logicController.conforms(to: UITableViewDelegate.self))
-        XCTAssertTrue(logicController.responds(to: #selector(logicController.tableView(_:didSelectRowAt:))))
+        XCTAssertTrue(logicController.responds(to: #selector(logicController.tableView(_:willDisplay:forRowAt:))))
     }
     
-    func testTableViewHasDataSource(){
+    func testTableViewConformsToScrollViewDelegateProtocol() {
+        XCTAssertTrue(logicController.conforms(to: UITableViewDelegate.self))
+        XCTAssertTrue(logicController.responds(to: #selector(logicController.scrollViewDidEndDragging(_:willDecelerate:))))
+    }
+    
+    func testTableViewHasDataSource() {
         XCTAssertNotNil(viewController.tableView?.dataSource)
     }
     
