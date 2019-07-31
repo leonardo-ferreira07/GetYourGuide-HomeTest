@@ -14,6 +14,7 @@ class GetYourGuideReviewTableViewCell: UITableViewCell {
     @IBOutlet weak var starsLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +27,7 @@ class GetYourGuideReviewTableViewCell: UITableViewCell {
         messageLabel.text = !(cell.review?.message?.isEmpty ?? true) ? cell.review?.message : "Sorry, no message for this review."
         messageLabel.textColor = !(cell.review?.message?.isEmpty ?? true) ? UIColor.black : UIColor.lightGray
         authorLabel.text = cell.review?.author
+        dateLabel.text = cell.review?.date
     }
     
 }

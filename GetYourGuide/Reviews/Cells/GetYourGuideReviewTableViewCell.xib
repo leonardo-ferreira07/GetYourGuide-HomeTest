@@ -43,8 +43,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xavier - Germany" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXP-Kp-a6g">
-                                <rect key="frame" x="16" y="312.5" width="316" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Xavier - Germany" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXP-Kp-a6g">
+                                <rect key="frame" x="16" y="312.5" width="119" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="2yX-V9-7hM"/>
                                 </constraints>
@@ -52,18 +52,41 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="September 31, 2222" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="rby-Du-GVO">
+                                <rect key="frame" x="151" y="313.5" width="144" height="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cEe-YV-brj">
+                                <rect key="frame" x="141" y="321" width="4" height="4"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="29E-W9-Zev"/>
+                                    <constraint firstAttribute="width" constant="4" id="ZNg-n4-6dD"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="4B8-B3-BzX" secondAttribute="trailing" constant="16" id="1Ia-1z-uSs"/>
+                            <constraint firstItem="rby-Du-GVO" firstAttribute="centerY" secondItem="pXP-Kp-a6g" secondAttribute="centerY" id="3BN-Rt-x3U"/>
+                            <constraint firstItem="rby-Du-GVO" firstAttribute="leading" secondItem="cEe-YV-brj" secondAttribute="trailing" constant="6" id="4YU-ZI-Cx1"/>
                             <constraint firstItem="4B8-B3-BzX" firstAttribute="top" secondItem="YNS-xS-GVv" secondAttribute="bottom" constant="15" id="5sv-i1-acf"/>
-                            <constraint firstAttribute="trailing" secondItem="pXP-Kp-a6g" secondAttribute="trailing" constant="16" id="7o4-LR-Ihl"/>
+                            <constraint firstItem="cEe-YV-brj" firstAttribute="centerY" secondItem="pXP-Kp-a6g" secondAttribute="centerY" id="7Ze-ME-Lne"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rby-Du-GVO" secondAttribute="trailing" constant="16" id="IQK-39-mb2"/>
                             <constraint firstItem="J0Q-0E-cG3" firstAttribute="top" secondItem="o8V-EQ-zmu" secondAttribute="top" constant="16" id="Vnh-75-WEm"/>
                             <constraint firstItem="J0Q-0E-cG3" firstAttribute="leading" secondItem="o8V-EQ-zmu" secondAttribute="leading" constant="16" id="XOn-hb-06f"/>
                             <constraint firstItem="4B8-B3-BzX" firstAttribute="leading" secondItem="o8V-EQ-zmu" secondAttribute="leading" constant="16" id="XqK-2J-bIC"/>
                             <constraint firstItem="YNS-xS-GVv" firstAttribute="leading" secondItem="o8V-EQ-zmu" secondAttribute="leading" constant="16" id="ji3-fS-6vE"/>
                             <constraint firstAttribute="trailing" secondItem="J0Q-0E-cG3" secondAttribute="trailing" constant="16" id="lY3-Tr-gxb"/>
                             <constraint firstAttribute="bottom" secondItem="pXP-Kp-a6g" secondAttribute="bottom" constant="10" id="mCX-9K-eHQ"/>
+                            <constraint firstItem="cEe-YV-brj" firstAttribute="leading" secondItem="pXP-Kp-a6g" secondAttribute="trailing" constant="6" id="mbZ-Kn-hkE"/>
                             <constraint firstItem="pXP-Kp-a6g" firstAttribute="top" secondItem="4B8-B3-BzX" secondAttribute="bottom" constant="10" id="p11-fx-ebu"/>
                             <constraint firstItem="pXP-Kp-a6g" firstAttribute="leading" secondItem="o8V-EQ-zmu" secondAttribute="leading" constant="16" id="ued-vY-W3s"/>
                             <constraint firstItem="YNS-xS-GVv" firstAttribute="top" secondItem="J0Q-0E-cG3" secondAttribute="bottom" constant="10" id="v0e-ds-mTR"/>
@@ -91,11 +114,12 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="authorLabel" destination="pXP-Kp-a6g" id="KhD-Hm-VtP"/>
+                <outlet property="dateLabel" destination="rby-Du-GVO" id="k2i-Cp-N9m"/>
                 <outlet property="messageLabel" destination="4B8-B3-BzX" id="KOc-a1-Ikx"/>
                 <outlet property="starsLabel" destination="YNS-xS-GVv" id="fkJ-NG-liU"/>
                 <outlet property="titleLabel" destination="J0Q-0E-cG3" id="Wvn-Km-Rzx"/>
             </connections>
-            <point key="canvasLocation" x="13.043478260869566" y="141.96428571428569"/>
+            <point key="canvasLocation" x="13.043478260869566" y="141.29464285714286"/>
         </tableViewCell>
     </objects>
 </document>
