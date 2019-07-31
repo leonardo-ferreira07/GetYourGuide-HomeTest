@@ -16,5 +16,26 @@ Application developed for an application to Senior iOS Engineer position at GetY
 - Open the `GetYourGuide.xcworkspace` file to be able to run the project;
 
 ## Third-party libraries:
+
 - [Kingfisher](https://github.com/onevcat/Kingfisher) - Framework written in pure-Swift code for downloading and caching images from the web (I used this to load the profile images from reviewers, the ones that have a profile image);
 
+## Architecture:
+
+### Base files:
+The generic files that could be exported into a framework or used by another app without any changes.
+
+- Networking folder - has the networking classes;
+- Extensions folder - has the extension classes used around the app;
+
+### App level files:
+The files that are dedicated to perform the actions and receive the specific data for  _GetYourGuide Reviews_ app.
+
+- Constants - has the constants files to be used on the app;
+- NetworkRequests - has the specific network request for each API call, created conforming to the `RequestProtocol`;
+- Models folder - has the models for the data gotten from the webservices;
+- Assets folder - has the default assets folder from Xcode and the storyboards (ideally separated into folders);
+- Reviews folder - has the components for that specific feature inside the app;
+  - Cells - has the `.xib` and `.swift` files for the collection/table view cells needed by the feature;
+  - ViewModels - has the view model files for that feature (the view models here are used to instantiate the requester and get the pertinent data, prepare the data and return the data ready to be used by the logic controller);
+  - LogicControllers - has the logic controller files (the logic controller contains all the logic to display the data to the user where disered, e.g inside a collection view);
+  - ViewControllers - has the view controller files (the view controller is responsible to handle the actions, navigation and updates to the view);
