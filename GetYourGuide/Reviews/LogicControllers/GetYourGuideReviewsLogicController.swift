@@ -11,8 +11,8 @@ import UIKit
 
 class GetYourGuideReviewsLogicController: NSObject {
     
-    fileprivate lazy var reviewsViewModel: GetYourGuideReviewsViewModel = GetYourGuideReviewsViewModel()
-    fileprivate var reviewCells: [GetYourGuideReviewCell] = []
+    private lazy var reviewsViewModel: GetYourGuideReviewsViewModel = GetYourGuideReviewsViewModel()
+    private var reviewCells: [GetYourGuideReviewCell] = []
     private let activityView = UIActivityIndicatorView(style: .gray)
     private let bottomActivityView = UIActivityIndicatorView(style: .gray)
     private var page: Int = 0
