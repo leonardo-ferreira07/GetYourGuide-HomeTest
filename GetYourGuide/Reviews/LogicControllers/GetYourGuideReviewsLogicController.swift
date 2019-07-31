@@ -13,47 +13,70 @@ class GetYourGuideReviewsLogicController: NSObject {
     
     fileprivate lazy var reviewsViewModel: GetYourGuideReviewsViewModel = GetYourGuideReviewsViewModel()
     fileprivate var reviewCells: [GetYourGuideReviewCell] = []
+    private let activityView = UIActivityIndicatorView(style: .gray)
+    private let bottomActivityView = UIActivityIndicatorView(style: .gray)
+    private var page: Int = 0
+    private weak var tableView: UITableView!
     
     // MARK: Public methods
     
-    func setTableView(tableView: UITableView) {
+    init(tableView: UITableView) {
+        super.init()
         
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorStyle = .none
+        self.tableView = tableView
         
-        registerCells(tableView: tableView)
+        setLoading()
+        registerCells()
     }
     
-    func loadTableView(tableView: UITableView) {
-        loadCells(tableView: tableView)
-        loadData(tableView: tableView)
+    func loadTableView() {
+        loadCells()
+        loadData()
     }
     
     // MARK: - Private methods
     
-    fileprivate func registerCells(tableView: UITableView) {
+    fileprivate func registerCells() {
         tableView.register(UINib (nibName: "GetYourGuideReviewTableViewCell", bundle: nil), forCellReuseIdentifier: GetYourGuideReviewTypeCell.review.rawValue)
     }
     
-    fileprivate func loadCells(tableView: UITableView) {
+    fileprivate func loadCells() {
 
-        DispatchQueue.main.async {
-            tableView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
         }
     }
     
-    fileprivate func loadData(tableView: UITableView) {
+    fileprivate func loadData(page: Int = 0) {
         
-        reviewsViewModel.getData() { [weak self] (cells) in
+        reviewsViewModel.getData(page: page) { [weak self] (cells) in
             guard let self = self else { return }
             
             if self.reviewsViewModel.isLoadingContent {
-                // delegate to loading
+                if page == 0 {
+                    DispatchQueue.main.async {
+                        self.startLoading()
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.tableView.tableFooterView = self.bottomActivityView
+                    }
+                }
             } else {
                 self.reviewCells = cells
-                DispatchQueue.main.async {
-                    tableView.reloadData()
+                if page == 0 {
+                    DispatchQueue.main.async {
+                        self.stopLoading()
+                        self.tableView.reloadData()
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.tableView.tableFooterView = nil
+                        self.tableView.reloadData()
+                    }
                 }
             }
         }
@@ -110,4 +133,41 @@ extension GetYourGuideReviewsLogicController: UITableViewDataSource {
         return cell
     }
     
+}
+
+// MARK: Scroll view delegate
+
+extension GetYourGuideReviewsLogicController: UIScrollViewDelegate {
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        
+        let currentOffset = scrollView.contentOffset.y
+        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
+        
+        if maximumOffset - currentOffset <= 150.0 {
+            page += 1
+            loadData(page: page)
+        }
+    }
+    
+}
+
+// MARK: Loading data
+
+extension GetYourGuideReviewsLogicController {
+    
+    private func setLoading() {
+        activityView.center = tableView.center
+        tableView.addSubview(activityView)
+        
+        bottomActivityView.startAnimating()
+    }
+    
+    private func startLoading() {
+        activityView.startAnimating()
+    }
+    
+    private func stopLoading() {
+        activityView.stopAnimating()
+    }
 }

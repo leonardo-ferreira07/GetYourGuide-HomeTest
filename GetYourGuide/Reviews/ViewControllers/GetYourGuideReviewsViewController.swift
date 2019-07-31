@@ -10,7 +10,7 @@ import UIKit
 
 class GetYourGuideReviewsViewController: UITableViewController {
 
-    let reviewsLogicController: GetYourGuideReviewsLogicController = GetYourGuideReviewsLogicController()
+    var reviewsLogicController: GetYourGuideReviewsLogicController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +27,11 @@ class GetYourGuideReviewsViewController: UITableViewController {
 extension GetYourGuideReviewsViewController {
     
     func setLogicControllers() {
-        reviewsLogicController.setTableView(tableView: tableView)
+        reviewsLogicController = GetYourGuideReviewsLogicController(tableView: tableView)
     }
     
     func loadTableView() {
-        reviewsLogicController.loadTableView(tableView: tableView)
+        reviewsLogicController?.loadTableView()
     }
 }
 
