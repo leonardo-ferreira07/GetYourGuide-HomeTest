@@ -10,7 +10,7 @@ import Foundation
 
 typealias DataResponse = (Data?, NetworkError?) -> Void
 
-class NetworkingRequester: NSObject {
+class NetworkRequester: NSObject {
     
     /// Request Generic data from server
     ///
@@ -26,7 +26,7 @@ class NetworkingRequester: NSObject {
             }
             
             guard let data = data else {
-                completion(nil, NetworkError.unknown("No error from server and Data is nil."))
+                completion(nil, NetworkError.unknown("No error from server and data is nil."))
                 return
             }
             

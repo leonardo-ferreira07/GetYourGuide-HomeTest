@@ -23,7 +23,7 @@ struct GetYourGuideReviewCell {
 
 class GetYourGuideReviewsViewModel {
     
-    private let requester: NetworkingRequester = NetworkingRequester()
+    private let requester: NetworkRequester = NetworkRequester()
     private var reviewsRequest: GetYourGuideReviewsRequest!
     private var cells: [GetYourGuideReviewCell] = []
     

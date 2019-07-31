@@ -35,6 +35,8 @@
 		A705AC8422F13B0F000F015C /* GetYourGuideReviewsLogicControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A705AC8322F13B0F000F015C /* GetYourGuideReviewsLogicControllerTests.swift */; };
 		A705AC8622F13CDF000F015C /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A705AC8522F13CDF000F015C /* ArrayExtensions.swift */; };
 		A7FCEF2422F20108002F0582 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FCEF2322F20108002F0582 /* UIImageViewExtensions.swift */; };
+		A7FCEF2722F23047002F0582 /* NetworkRequesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FCEF2622F23047002F0582 /* NetworkRequesterTests.swift */; };
+		A7FCEF2A22F23357002F0582 /* AwesomeRequesterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FCEF2922F23357002F0582 /* AwesomeRequesterMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		A705AC8322F13B0F000F015C /* GetYourGuideReviewsLogicControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetYourGuideReviewsLogicControllerTests.swift; sourceTree = "<group>"; };
 		A705AC8522F13CDF000F015C /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		A7FCEF2322F20108002F0582 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
+		A7FCEF2622F23047002F0582 /* NetworkRequesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequesterTests.swift; sourceTree = "<group>"; };
+		A7FCEF2922F23357002F0582 /* AwesomeRequesterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeRequesterMock.swift; sourceTree = "<group>"; };
 		BAFBDCE84B7D1C69A5D023EC /* Pods-GetYourGuideTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetYourGuideTests.release.xcconfig"; path = "Target Support Files/Pods-GetYourGuideTests/Pods-GetYourGuideTests.release.xcconfig"; sourceTree = "<group>"; };
 		CD608530BFCF3A0AF633AF97 /* Pods_GetYourGuide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetYourGuide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -165,6 +169,8 @@
 		A705AC3A22F0B2F5000F015C /* GetYourGuideTests */ = {
 			isa = PBXGroup;
 			children = (
+				A7FCEF2822F23347002F0582 /* Mocks */,
+				A7FCEF2522F23031002F0582 /* Networking */,
 				A705AC8222F13AF0000F015C /* LogicControllers */,
 				A705AC6422F0D160000F015C /* Models */,
 				A705AC3B22F0B2F5000F015C /* GetYourGuideURLTests.swift */,
@@ -233,7 +239,6 @@
 			children = (
 				A705AC6322F0D0C0000F015C /* JSONs */,
 				A705AC6122F0D08C000F015C /* GetYourGuideReviewsModelTests.swift */,
-				A705AC6522F0D172000F015C /* MockJSONLoader.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -298,6 +303,23 @@
 				A705AC8322F13B0F000F015C /* GetYourGuideReviewsLogicControllerTests.swift */,
 			);
 			path = LogicControllers;
+			sourceTree = "<group>";
+		};
+		A7FCEF2522F23031002F0582 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A7FCEF2622F23047002F0582 /* NetworkRequesterTests.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A7FCEF2822F23347002F0582 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A705AC6522F0D172000F015C /* MockJSONLoader.swift */,
+				A7FCEF2922F23357002F0582 /* AwesomeRequesterMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -495,8 +517,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A705AC6222F0D08C000F015C /* GetYourGuideReviewsModelTests.swift in Sources */,
+				A7FCEF2722F23047002F0582 /* NetworkRequesterTests.swift in Sources */,
 				A705AC3C22F0B2F5000F015C /* GetYourGuideURLTests.swift in Sources */,
 				A705AC6622F0D172000F015C /* MockJSONLoader.swift in Sources */,
+				A7FCEF2A22F23357002F0582 /* AwesomeRequesterMock.swift in Sources */,
 				A705AC8422F13B0F000F015C /* GetYourGuideReviewsLogicControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
