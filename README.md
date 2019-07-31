@@ -37,5 +37,5 @@ The files that are dedicated to perform the actions and receive the specific dat
 - Reviews folder - has the components for that specific feature inside the app;
   - Cells - has the `.xib` and `.swift` files for the collection/table view cells needed by the feature;
   - ViewModels - has the view model files for that feature (the view models here are used to instantiate the requester and get the pertinent data, prepare the data and return the data ready to be used by the logic controller);
-  - LogicControllers - has the logic controller files (the logic controller contains all the logic to display the data to the user where disered, e.g inside a collection view);
+  - LogicControllers - has the logic controller files (the logic controller contains all the logic to display the data to the user where desired, e.g inside a collection view);
   - ViewControllers - has the view controller files (the view controller is responsible to handle the actions, navigation and updates to the view);
