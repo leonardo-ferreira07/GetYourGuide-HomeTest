@@ -10,14 +10,16 @@ import Foundation
 
 enum GetYourGuideReviewTypeCell: String {
     case review = "GetYourGuideReview"
+    case error = "GetYourGuideReviewError"
 }
 
 struct GetYourGuideReviewCell {
     var type: GetYourGuideReviewTypeCell = .review
     var review: GetYourGuideReviewModel?
     
-    init(_ review: GetYourGuideReviewModel?) {
+    init(_ review: GetYourGuideReviewModel?, type: GetYourGuideReviewTypeCell = .review) {
         self.review = review
+        self.type = type
     }
 }
 
@@ -40,6 +42,9 @@ class GetYourGuideReviewsViewModel {
             
             if let error = error {
                 print(error)
+                if self.cells.isEmpty {
+                    self.cells.append(GetYourGuideReviewCell(nil, type: .error))
+                }
                 response(self.cells)
                 return
             }

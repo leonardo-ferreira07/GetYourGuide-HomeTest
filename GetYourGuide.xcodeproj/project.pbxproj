@@ -37,6 +37,8 @@
 		A7FCEF2422F20108002F0582 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FCEF2322F20108002F0582 /* UIImageViewExtensions.swift */; };
 		A7FCEF2722F23047002F0582 /* NetworkRequesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FCEF2622F23047002F0582 /* NetworkRequesterTests.swift */; };
 		A7FCEF2A22F23357002F0582 /* AwesomeRequesterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FCEF2922F23357002F0582 /* AwesomeRequesterMock.swift */; };
+		A7FCEF3122F24065002F0582 /* GetYourGuideReviewErrorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FCEF2F22F24065002F0582 /* GetYourGuideReviewErrorTableViewCell.swift */; };
+		A7FCEF3222F24065002F0582 /* GetYourGuideReviewErrorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7FCEF3022F24065002F0582 /* GetYourGuideReviewErrorTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		A7FCEF2322F20108002F0582 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		A7FCEF2622F23047002F0582 /* NetworkRequesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequesterTests.swift; sourceTree = "<group>"; };
 		A7FCEF2922F23357002F0582 /* AwesomeRequesterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeRequesterMock.swift; sourceTree = "<group>"; };
+		A7FCEF2F22F24065002F0582 /* GetYourGuideReviewErrorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetYourGuideReviewErrorTableViewCell.swift; sourceTree = "<group>"; };
+		A7FCEF3022F24065002F0582 /* GetYourGuideReviewErrorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GetYourGuideReviewErrorTableViewCell.xib; sourceTree = "<group>"; };
 		BAFBDCE84B7D1C69A5D023EC /* Pods-GetYourGuideTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetYourGuideTests.release.xcconfig"; path = "Target Support Files/Pods-GetYourGuideTests/Pods-GetYourGuideTests.release.xcconfig"; sourceTree = "<group>"; };
 		CD608530BFCF3A0AF633AF97 /* Pods_GetYourGuide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetYourGuide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -293,6 +297,8 @@
 			children = (
 				A705AC7C22F0E184000F015C /* GetYourGuideReviewTableViewCell.swift */,
 				A705AC7D22F0E184000F015C /* GetYourGuideReviewTableViewCell.xib */,
+				A7FCEF2F22F24065002F0582 /* GetYourGuideReviewErrorTableViewCell.swift */,
+				A7FCEF3022F24065002F0582 /* GetYourGuideReviewErrorTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -416,6 +422,7 @@
 			files = (
 				A705AC3122F0B2F5000F015C /* LaunchScreen.storyboard in Resources */,
 				A705AC2E22F0B2F5000F015C /* Assets.xcassets in Resources */,
+				A7FCEF3222F24065002F0582 /* GetYourGuideReviewErrorTableViewCell.xib in Resources */,
 				A705AC7F22F0E184000F015C /* GetYourGuideReviewTableViewCell.xib in Resources */,
 				A705AC2C22F0B2F3000F015C /* Main.storyboard in Resources */,
 			);
@@ -510,6 +517,7 @@
 				A705AC4D22F0B862000F015C /* NetworkError.swift in Sources */,
 				A705AC2722F0B2F3000F015C /* AppDelegate.swift in Sources */,
 				A705AC5D22F0C7CC000F015C /* GetYourGuideReviewsRequest.swift in Sources */,
+				A7FCEF3122F24065002F0582 /* GetYourGuideReviewErrorTableViewCell.swift in Sources */,
 				A705AC7E22F0E184000F015C /* GetYourGuideReviewTableViewCell.swift in Sources */,
 				A705AC8122F12F88000F015C /* UIViewExtensions.swift in Sources */,
 				A705AC6022F0CA36000F015C /* GetYourGuideReviewsModel.swift in Sources */,

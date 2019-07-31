@@ -41,6 +41,7 @@ class GetYourGuideReviewsLogicController: NSObject {
     
     fileprivate func registerCells() {
         tableView.register(UINib (nibName: "GetYourGuideReviewTableViewCell", bundle: nil), forCellReuseIdentifier: GetYourGuideReviewTypeCell.review.rawValue)
+        tableView.register(UINib (nibName: "GetYourGuideReviewErrorTableViewCell", bundle: nil), forCellReuseIdentifier: GetYourGuideReviewTypeCell.error.rawValue)
     }
     
     fileprivate func loadData(page: Int = 0) {
@@ -77,6 +78,8 @@ extension GetYourGuideReviewsLogicController: UITableViewDelegate {
         switch reviewCells[indexPath.row].type {
         case .review:
             return UITableView.automaticDimension
+        case .error:
+            return tableView.frame.size.height/2
         }
     }
     
