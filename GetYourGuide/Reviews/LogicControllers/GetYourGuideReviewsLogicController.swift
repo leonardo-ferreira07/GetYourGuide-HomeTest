@@ -26,6 +26,7 @@ class GetYourGuideReviewsLogicController: NSObject {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorStyle = .none
+        tableView.estimatedRowHeight = UITableView.automaticDimension
         self.tableView = tableView
         
         setLoading()
@@ -77,10 +78,6 @@ extension GetYourGuideReviewsLogicController: UITableViewDelegate {
         case .review:
             return UITableView.automaticDimension
         }
-    }
-    
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 44.0
     }
     
 }
