@@ -27,6 +27,7 @@ class GetYourGuideReviewsModelTests: XCTestCase {
         
         let decodedData = try? JSONDecoder().decode(GetYourGuideReviewsModel.self, from: data)
         XCTAssertEqual(decodedData?.reviews[2].author, "Franz-Josef – Germany")
+        XCTAssertEqual(decodedData?.reviews[0].ratingNormalized, "4")
         XCTAssertEqual(decodedData?.reviews.count, 15)
         
     }
