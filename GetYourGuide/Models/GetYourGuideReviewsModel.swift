@@ -32,6 +32,12 @@ struct GetYourGuideReviewModel: Decodable {
     let reviewerCountry: String?
     let reviewerProfilePhoto: String?
     
+    // MARK: Computed properties
+    
+    var ratingNormalized: String? {
+        return rating?.replacingOccurrences(of: ".0", with: "")
+    }
+    
 }
 
 extension GetYourGuideReviewModel {

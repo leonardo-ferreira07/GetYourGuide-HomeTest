@@ -22,7 +22,7 @@ class GetYourGuideReviewTableViewCell: UITableViewCell {
     
     func setCell(with cell: GetYourGuideReviewCell) {
         titleLabel.text = cell.review?.title
-        starsLabel.text = "\(cell.review?.rating?.replacingOccurrences(of: ".0", with: "") ?? "0") of 5 stars"
+        starsLabel.text = "\(cell.review?.ratingNormalized ?? "0") of 5 stars"
         messageLabel.text = !(cell.review?.message?.isEmpty ?? true) ? cell.review?.message : "Sorry, no message for this review."
         messageLabel.textColor = !(cell.review?.message?.isEmpty ?? true) ? UIColor.black : UIColor.lightGray
         authorLabel.text = cell.review?.author

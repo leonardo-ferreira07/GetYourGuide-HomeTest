@@ -24,7 +24,7 @@ struct GetYourGuideReviewCell {
 class GetYourGuideReviewsViewModel {
     
     private let requester: NetworkingRequester = NetworkingRequester()
-    private var reviewsRequest: GetYourGuideReviewsRequest = GetYourGuideReviewsRequest()
+    private var reviewsRequest: GetYourGuideReviewsRequest!
     private var cells: [GetYourGuideReviewCell] = []
     
     var isLoadingContent: Bool = false
