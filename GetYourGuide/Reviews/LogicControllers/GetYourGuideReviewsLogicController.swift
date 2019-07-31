@@ -56,27 +56,13 @@ class GetYourGuideReviewsLogicController: NSObject {
             guard let self = self else { return }
             
             if self.reviewsViewModel.isLoadingContent {
-                if page == 0 {
-                    DispatchQueue.main.async {
-                        self.startLoading()
-                    }
-                } else {
-                    DispatchQueue.main.async {
-                        self.tableView.tableFooterView = self.bottomActivityView
-                    }
-                }
+                self.handleLoading(page == 0)
             } else {
                 self.reviewCells = cells
-                if page == 0 {
-                    DispatchQueue.main.async {
-                        self.stopLoading()
-                        self.tableView.reloadData()
-                    }
-                } else {
-                    DispatchQueue.main.async {
-                        self.tableView.tableFooterView = nil
-                        self.tableView.reloadData()
-                    }
+                DispatchQueue.main.async { [weak self] in
+                    self?.stopLoading()
+                    self?.tableView.tableFooterView = nil
+                    self?.tableView.reloadData()
                 }
             }
         }
@@ -169,5 +155,17 @@ extension GetYourGuideReviewsLogicController {
     
     private func stopLoading() {
         activityView.stopAnimating()
+    }
+    
+    private func handleLoading(_ isFirstPage: Bool) {
+        if isFirstPage {
+            DispatchQueue.main.async { [weak self] in
+                self?.startLoading()
+            }
+        } else {
+            DispatchQueue.main.async { [weak self] in
+                self?.tableView.tableFooterView = self?.bottomActivityView
+            }
+        }
     }
 }
