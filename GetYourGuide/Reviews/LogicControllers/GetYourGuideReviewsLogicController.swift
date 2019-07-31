@@ -33,7 +33,6 @@ class GetYourGuideReviewsLogicController: NSObject {
     }
     
     func loadTableView() {
-        loadCells()
         loadData()
     }
     
@@ -41,13 +40,6 @@ class GetYourGuideReviewsLogicController: NSObject {
     
     fileprivate func registerCells() {
         tableView.register(UINib (nibName: "GetYourGuideReviewTableViewCell", bundle: nil), forCellReuseIdentifier: GetYourGuideReviewTypeCell.review.rawValue)
-    }
-    
-    fileprivate func loadCells() {
-
-        DispatchQueue.main.async { [weak self] in
-            self?.tableView.reloadData()
-        }
     }
     
     fileprivate func loadData(page: Int = 0) {
