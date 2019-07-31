@@ -1,6 +1,8 @@
 # GetYourGuide HomeTest
 
-Application developed for an application to Senior iOS Engineer position at GetYourGuide.
+Application developed for an application to Senior iOS Engineer position at GetYourGuide. 
+
+It's basically a list of reviews for one of our most [popular Berlin tours](https://www.getyourguide.com/berlin-l17/tempelhof-2-hour-airport-history-tour-berlin-airlift-more-t23776/), it has paging feature include, so once the user reaches the bottom of the screen, it will add a loading indicator at bottom and then load more data.
 
 ## Requirements:
 
