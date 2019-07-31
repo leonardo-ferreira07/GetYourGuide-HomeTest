@@ -42,6 +42,7 @@ class GetYourGuideReviewsViewModel {
             
             if let error = error {
                 print(error)
+                
                 if self.cells.isEmpty {
                     self.cells.append(GetYourGuideReviewCell(nil, type: .error))
                 }

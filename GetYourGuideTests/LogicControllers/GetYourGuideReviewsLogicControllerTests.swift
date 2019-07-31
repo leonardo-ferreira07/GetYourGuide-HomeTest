@@ -78,7 +78,8 @@ extension GetYourGuideReviewsLogicControllerTests {
             return
         }
         
-        let shouldBeRegistered: [String] = [GetYourGuideReviewTypeCell.review.rawValue]
+        let shouldBeRegistered: [String] = [GetYourGuideReviewTypeCell.review.rawValue,
+                                            GetYourGuideReviewTypeCell.error.rawValue]
         let flatNib = Array(registeredNibs.map({ $0.key }))
         if !shouldBeRegistered.containsSameElements(as: flatNib) {
             XCTFail("Missing registered nibs")
