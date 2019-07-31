@@ -39,3 +39,6 @@ The files that are dedicated to perform the actions and receive the specific dat
   - ViewModels - has the view model files for that feature (the view models here are used to instantiate the requester and get the pertinent data, prepare the data and return the data ready to be used by the logic controller);
   - LogicControllers - has the logic controller files (the logic controller contains all the logic to display the data to the user where desired, e.g inside a collection view);
   - ViewControllers - has the view controller files (the view controller is responsible to handle the actions, navigation and updates to the view);
+  
+ ## Unit tests:
+ - I added some unit tests to the project, they are under the `GetYourGuideTests` folder and separated into folders related to their function or architecture.
