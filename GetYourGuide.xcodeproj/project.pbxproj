@@ -173,7 +173,7 @@
 				A7FCEF2522F23031002F0582 /* Networking */,
 				A705AC8222F13AF0000F015C /* LogicControllers */,
 				A705AC6422F0D160000F015C /* Models */,
-				A705AC3B22F0B2F5000F015C /* GetYourGuideURLTests.swift */,
+				A7FCEF2C22F23AA8002F0582 /* Constants */,
 				A705AC3D22F0B2F5000F015C /* Info.plist */,
 			);
 			path = GetYourGuideTests;
@@ -320,6 +320,14 @@
 				A7FCEF2922F23357002F0582 /* AwesomeRequesterMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		A7FCEF2C22F23AA8002F0582 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A705AC3B22F0B2F5000F015C /* GetYourGuideURLTests.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
