@@ -23,8 +23,9 @@ struct GetYourGuideReviewCell {
 
 class GetYourGuideReviewsViewModel {
     
-    let requester: NetworkingRequester = NetworkingRequester()
-    var reviewsRequest: GetYourGuideReviewsRequest = GetYourGuideReviewsRequest()
+    private let requester: NetworkingRequester = NetworkingRequester()
+    private var reviewsRequest: GetYourGuideReviewsRequest = GetYourGuideReviewsRequest()
+    private var cells: [GetYourGuideReviewCell] = []
     
     var isLoadingContent: Bool = false
     
@@ -32,20 +33,24 @@ class GetYourGuideReviewsViewModel {
         isLoadingContent = true
         response([])
         
+        reviewsRequest = GetYourGuideReviewsRequest(page: page)
         requester.performRequest(reviewsRequest) { [weak self] (data: GetYourGuideReviewsModel?, error) in
-            self?.isLoadingContent = false
+            guard let self = self else { return }
+            self.isLoadingContent = false
             
             if let error = error {
                 print(error)
                 return
             }
             
-            var cells: [GetYourGuideReviewCell] = []
+            if page == 0 {
+                self.cells = []
+            }
             for review in data?.reviews ?? [] {
-                cells.append(GetYourGuideReviewCell.init(review))
+                self.cells.append(GetYourGuideReviewCell.init(review))
             }
             
-            response(cells)
+            response(self.cells)
         }
     }
     

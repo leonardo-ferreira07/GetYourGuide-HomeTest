@@ -48,10 +48,13 @@ class GetYourGuideReviewsLogicController: NSObject {
         reviewsViewModel.getData() { [weak self] (cells) in
             guard let self = self else { return }
             
-            self.reviewCells = cells
-            
-            DispatchQueue.main.async {
-                tableView.reloadData()
+            if self.reviewsViewModel.isLoadingContent {
+                // delegate to loading
+            } else {
+                self.reviewCells = cells
+                DispatchQueue.main.async {
+                    tableView.reloadData()
+                }
             }
         }
     }
