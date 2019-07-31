@@ -80,7 +80,7 @@ class NetworkRequester: NSObject {
                 } else {
                     completion(nil, NetworkError.unknown(error.localizedDescription))
                 }
-            }else{
+            } else {
                 if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 401  {
                     completion(nil, NetworkError.unauthorized)
                 } else {
