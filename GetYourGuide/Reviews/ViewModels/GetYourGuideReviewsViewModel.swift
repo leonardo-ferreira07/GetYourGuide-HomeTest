@@ -40,6 +40,7 @@ class GetYourGuideReviewsViewModel {
             
             if let error = error {
                 print(error)
+                response(self.cells)
                 return
             }
             
