@@ -30,6 +30,7 @@
 		A705AC7A22F0DE98000F015C /* GetYourGuideReviewsLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A705AC7922F0DE98000F015C /* GetYourGuideReviewsLogicController.swift */; };
 		A705AC7E22F0E184000F015C /* GetYourGuideReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A705AC7C22F0E184000F015C /* GetYourGuideReviewTableViewCell.swift */; };
 		A705AC7F22F0E184000F015C /* GetYourGuideReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A705AC7D22F0E184000F015C /* GetYourGuideReviewTableViewCell.xib */; };
+		A705AC8122F12F88000F015C /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A705AC8022F12F88000F015C /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		A705AC7922F0DE98000F015C /* GetYourGuideReviewsLogicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetYourGuideReviewsLogicController.swift; sourceTree = "<group>"; };
 		A705AC7C22F0E184000F015C /* GetYourGuideReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetYourGuideReviewTableViewCell.swift; sourceTree = "<group>"; };
 		A705AC7D22F0E184000F015C /* GetYourGuideReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GetYourGuideReviewTableViewCell.xib; sourceTree = "<group>"; };
+		A705AC8022F12F88000F015C /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			children = (
 				A705AC5222F0BB61000F015C /* StringExtensions.swift */,
 				A705AC5422F0BBEB000F015C /* URLRequestExtensions.swift */,
+				A705AC8022F12F88000F015C /* UIViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				A705AC2722F0B2F3000F015C /* AppDelegate.swift in Sources */,
 				A705AC5D22F0C7CC000F015C /* GetYourGuideReviewsRequest.swift in Sources */,
 				A705AC7E22F0E184000F015C /* GetYourGuideReviewTableViewCell.swift in Sources */,
+				A705AC8122F12F88000F015C /* UIViewExtensions.swift in Sources */,
 				A705AC6022F0CA36000F015C /* GetYourGuideReviewsModel.swift in Sources */,
 				A705AC5B22F0C712000F015C /* URLConstants.swift in Sources */,
 				A705AC4E22F0B862000F015C /* NetworkRequester.swift in Sources */,
