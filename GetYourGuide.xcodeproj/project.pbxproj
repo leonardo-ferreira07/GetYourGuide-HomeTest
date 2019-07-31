@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -34,6 +34,7 @@
 		A705AC8122F12F88000F015C /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A705AC8022F12F88000F015C /* UIViewExtensions.swift */; };
 		A705AC8422F13B0F000F015C /* GetYourGuideReviewsLogicControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A705AC8322F13B0F000F015C /* GetYourGuideReviewsLogicControllerTests.swift */; };
 		A705AC8622F13CDF000F015C /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A705AC8522F13CDF000F015C /* ArrayExtensions.swift */; };
+		A7FCEF2422F20108002F0582 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FCEF2322F20108002F0582 /* UIImageViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		A705AC8022F12F88000F015C /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		A705AC8322F13B0F000F015C /* GetYourGuideReviewsLogicControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetYourGuideReviewsLogicControllerTests.swift; sourceTree = "<group>"; };
 		A705AC8522F13CDF000F015C /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
+		A7FCEF2322F20108002F0582 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		BAFBDCE84B7D1C69A5D023EC /* Pods-GetYourGuideTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetYourGuideTests.release.xcconfig"; path = "Target Support Files/Pods-GetYourGuideTests/Pods-GetYourGuideTests.release.xcconfig"; sourceTree = "<group>"; };
 		CD608530BFCF3A0AF633AF97 /* Pods_GetYourGuide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetYourGuide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -121,7 +123,6 @@
 				43B718EEA78D598964307BB6 /* Pods-GetYourGuideTests.debug.xcconfig */,
 				BAFBDCE84B7D1C69A5D023EC /* Pods-GetYourGuideTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -189,6 +190,7 @@
 				A705AC5422F0BBEB000F015C /* URLRequestExtensions.swift */,
 				A705AC8022F12F88000F015C /* UIViewExtensions.swift */,
 				A705AC8522F13CDF000F015C /* ArrayExtensions.swift */,
+				A7FCEF2322F20108002F0582 /* UIImageViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -471,6 +473,7 @@
 			files = (
 				A705AC5322F0BB61000F015C /* StringExtensions.swift in Sources */,
 				A705AC8622F13CDF000F015C /* ArrayExtensions.swift in Sources */,
+				A7FCEF2422F20108002F0582 /* UIImageViewExtensions.swift in Sources */,
 				A705AC7722F0DE33000F015C /* GetYourGuideReviewsViewController.swift in Sources */,
 				A705AC5522F0BBEB000F015C /* URLRequestExtensions.swift in Sources */,
 				A705AC7A22F0DE98000F015C /* GetYourGuideReviewsLogicController.swift in Sources */,

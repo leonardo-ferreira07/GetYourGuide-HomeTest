@@ -15,6 +15,7 @@ class GetYourGuideReviewTableViewCell: UITableViewCell {
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var authorImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,6 +29,10 @@ class GetYourGuideReviewTableViewCell: UITableViewCell {
         messageLabel.textColor = !(cell.review?.message?.isEmpty ?? true) ? UIColor.black : UIColor.lightGray
         authorLabel.text = cell.review?.author
         dateLabel.text = cell.review?.date
+    }
+    
+    func setCellImages(with cell: GetYourGuideReviewCell) {
+        authorImageView.loadImage(cell.review?.reviewerProfilePhoto)
     }
     
 }
